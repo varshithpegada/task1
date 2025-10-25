@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INFO ABOUT TYPES OF AEROPLANES</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background-color: rgb(14, 215, 158);
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    section {
+      display: none;
+      background: rgb(102, 151, 224);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section.active {
+      display: block;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    h2 {
+      color: BLACK;
+    }
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: black;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    INFO ABOUT TYPES OF AEROPLANES
+  </header>
+
+  <main>
+    <section id="home" class="active">
+      <h2>AEROPLANES</h2>
+      <p>Click on any image to learn more:</p>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1567446188601-95f43044f6dc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JTIyQUlSQlVTJTIwQTM4MHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Airbus A380" onclick="showDetails(1)">
+        <img src="https://images.unsplash.com/photo-1679398083667-0f9ee9bbdf90?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8JTIyQUlSQlVTJTIwQTMyMHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Airbus A320" onclick="showDetails(2)">
+        <img src="https://images.unsplash.com/photo-1752901320179-f39106b550fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JTIyQUlSQlVTJTIwQTM1MHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Airbus A350" onclick="showDetails(3)">
+        <img src="https://images.unsplash.com/photo-1657813344342-1b4c45bc8a30?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9laW5nNzM3fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Boeing 737" onclick="showDetails(4)">
+        <img src="https://images.unsplash.com/photo-1732943679825-3f9900317a11?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Ym9laW5nNzQ3fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Boeing 747" onclick="showDetails(5)">
+        <img src="https://images.unsplash.com/photo-1725099420982-40280959088a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXRyJTIwNzJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" alt="ATR 72" onclick="showDetails(6)">
+        <img src="https://images.unsplash.com/photo-1558718781-7bd163ce382d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWlyYnVzJTIwYTIyMHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Airbus A220" onclick="showDetails(7)">
+        <img src="https://i.pinimg.com/1200x/bf/74/80/bf74806f24ebf1a8d5b2edd1e8d36067.jpg" alt="Antonov 225" onclick="showDetails(8)">
+        <img src="https://images.unsplash.com/photo-1659988523970-67ba588bf482?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW1waGliaW91cyUyMGFpcmNyYWZ0fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Amphibious Aircraft" onclick="showDetails(9)">
+        <img src="https://images.unsplash.com/photo-1632246030676-6229211f2907?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW50b25vdiUyMGFuJTIwLTEyNHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="Antonov An-124" onclick="showDetails(10)">
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 id="imageTitle">Image Details</h2>
+      <img id="imageDisplay" style="width:400px; border-radius:8px; margin:20px 0;">
+      <p id="imageDescription">Click an image to see its details here.</p>
+      <button onclick="navigateTo('home')">Back to Gallery</button>
+    </section>
+  </main>
+
+  <script>
+    const imageData = {
+      1: {
+        title: "AIRBUS A380",
+        description: "The Airbus A380 is the world's largest passenger airliner with two decks and four engines, capable of carrying over 500 passengers."
+      },
+      2: {
+        title: "AIRBUS A320",
+        description: "The Airbus A320 is a single-aisle, narrow-body airliner known for its efficiency and use of fly-by-wire control systems."
+      },
+      3: {
+        title: "AIRBUS A350",
+        description: "The Airbus A350 is a long-range, wide-body jetliner made from lightweight composite materials for improved fuel efficiency."
+      },
+      4: {
+        title: "BOEING 737",
+        description: "The Boeing 737 is a popular narrow-body aircraft widely used for short to medium-haul routes around the world."
+      },
+      5: {
+        title: "BOEING 747",
+        description: "The Boeing 747, also known as the 'Queen of the Skies', revolutionized long-distance travel with its unique hump design."
+      },
+      6: {
+        title: "ATR 72",
+        description: "The ATR 72 is a twin-engine turboprop regional airliner commonly used for short-haul routes."
+      },
+      7: {
+        title: "AIRBUS A220",
+        description: "The Airbus A220 is a modern, fuel-efficient regional jet designed for short and medium-haul operations."
+      },
+      8: {
+        title: "ANTONOV AN-225 MRIYA",
+        description: "The Antonov An-225 Mriya was the largest and heaviest cargo aircraft ever built, capable of carrying 250 tons."
+      },
+      9: {
+        title: "AMPHIBIOUS AIRCRAFT",
+        description: "An amphibious aircraft can take off and land on both water and land surfaces."
+      },
+      10: {
+        title: "ANTONOV AN-124 RUSLAN",
+        description: "The Antonov An-124 is a heavy transport aircraft used for carrying oversized cargo worldwide."
+      }
+    };
+
+    function navigateTo(screenId) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(screenId).classList.add('active');
+    }
+
+    function showDetails(id) {
+      const image = imageData[id];
+      document.getElementById("imageTitle").textContent = image.title;
+      document.getElementById("imageDescription").textContent = image.description;
+      document.getElementById("imageDisplay").src = document.querySelectorAll('.gallery img')[id - 1].src;
+      navigateTo('about');
+    }
+  </script>
+</body>
+</html>
